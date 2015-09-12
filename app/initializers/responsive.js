@@ -1,3 +1,1 @@
-import responsive from 'ember-responsive/initializers/responsive';
-
-export default responsive;
+import { default, responsive } from 'ember-responsive/initializers/responsive';

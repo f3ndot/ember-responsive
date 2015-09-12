@@ -1,6 +1,6 @@
 /* global sinon */
 import Ember from 'ember';
-import initializer from '../../../initializers/responsive';
+import { initialize } from '../../../initializers/responsive';
 import instanceInitializer from '../../../instance-initializers/responsive';
 import { module, test } from 'qunit';
 
@@ -24,7 +24,7 @@ test('it works', function(assert) {
   application.register =  sinon.stub();
   application.inject =  sinon.stub();
 
-  initializer.initialize(container, application);
+  initialize(container, application);
 
   if (Ember.Application.instanceInitializer) {
     assert.ok(!container.lookupFactory.calledWith('breakpoints:main'), 'skipped looking up breakpoints');
